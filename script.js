@@ -4,8 +4,10 @@ fetch("https://script.google.com/macros/s/AKfycbw5ECe3hrkJwDrYPiEzzM6cemy4Clu7bc
     .then(data => {
         data.forEach(post => {
             const postElement = document.createElement("p");
-            postElement.textContent = post.colimn1;
-            datacontainer.appendChild(postElement);
+            postElement.textContent = `
+                local a = ${post.colimn1}
+            `;
+            datacontainer.appendChild();
         })
     })
     .catch(error => {
